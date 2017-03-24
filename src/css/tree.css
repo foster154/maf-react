@@ -1,15 +1,15 @@
 .tree .leaf:nth-of-type(7n) {
-  animation: leaf-grow 2s 1s ease-out backwards;
+  animation: leaf-grow 1.5s 1s ease-out backwards;
   transform-origin: 50% 100%;
 }
 
 .tree .leaf:nth-of-type(5n) {
-  animation: leaf-grow 2s 1.5s ease-out backwards;
+  animation: leaf-grow 1.5s 1.5s ease-out backwards;
   transform-origin: 50% 100%;
 }
 
 .tree .leaf {
-  animation: leaf-grow 2s 2s ease-out backwards;
+  animation: leaf-grow 1.5s 2s ease-out backwards;
   transform-origin: 50% 100%;
 }
 

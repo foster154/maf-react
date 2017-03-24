@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import familyPic from '../../assets/family-triangles.jpg'
+import familyPic from '../assets/family-triangles.jpg'
 
 const About = () => (
   <PageWrapper>

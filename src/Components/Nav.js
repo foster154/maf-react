@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { Route, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../colors'
-import Home from './Home/Home.js'
-import About from './About/About.js'
+import Home from './Home/Home'
+import About from './About'
+import Contact from './Contact'
 import avatar from '../assets/avatar.jpg'
 
 class Nav extends Component {
@@ -25,6 +26,7 @@ class Nav extends Component {
 
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
       </Wrapper>
 
     )
@@ -34,8 +36,7 @@ class Nav extends Component {
 export default Nav
 
 const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  flex: 1;
 `
 
 const NavBar = styled.nav`
