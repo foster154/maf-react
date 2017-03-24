@@ -9,7 +9,7 @@ import avatar from '../assets/avatar.jpg'
 class Nav extends Component {
   render () {
     return (
-      <div>
+      <Wrapper>
         <NavBar>
           <Links>
             <Logo to='/'>
@@ -25,13 +25,18 @@ class Nav extends Component {
 
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
-      </div>
+      </Wrapper>
 
     )
   }
 }
 
 export default Nav
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 const NavBar = styled.nav`
   background-color: ${colors.dkBlue};
