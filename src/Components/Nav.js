@@ -1,13 +1,10 @@
-import React, { Component, PropTypes } from 'react'
-import {
-  BrowserRouter as Router,
-  Route,
-  NavLink } from 'react-router-dom'
+import React, { Component } from 'react'
+import { Route, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../colors'
-
 import Home from './Home/Home.js'
 import About from './About/About.js'
+import avatar from '../assets/avatar.jpg'
 
 class Nav extends Component {
   render () {
@@ -15,7 +12,10 @@ class Nav extends Component {
       <div>
         <NavBar>
           <Links>
-            <Logo to='/'>Mark Adam Foster</Logo>
+            <Logo to='/'>
+              <Avatar src={avatar} />
+              Mark Adam Foster
+            </Logo>
             <NavItem to='/' exact activeStyle={{color: colors.orange}}>Home</NavItem>
             <NavItem to='/about' activeStyle={{color: colors.orange}}>About</NavItem>
             <NavItem to='/projects' activeStyle={{color: colors.orange}}>Projects</NavItem>
@@ -36,6 +36,23 @@ export default Nav
 const NavBar = styled.nav`
   background-color: ${colors.dkBlue};
   display: flex;
+`
+
+const Avatar = styled.img`
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
+`
+
+const Logo = styled(NavLink)`
+  display: flex;
+  color: white;
+  text-decoration: none;
+  font-family: 'Journal';
+  font-size: 3em;
+  margin-right: auto;
+  align-items: center;
 `;
 
 const Links = styled.ul`
@@ -44,24 +61,17 @@ const Links = styled.ul`
   list-style: none;
   text-decoration: none;
   width: 100%;
-`;
+  margin-right: 40px;
+`
 
 const NavItem = styled(NavLink)`
   color: white;
   text-decoration: none;
   margin: 24px 15px;
   font-size: 1.1em;
-  font-weight: 300;
+  // font-weight: 300;
   &:hover {
     color: ${colors.orange};
     transition: color 0.3s;
   }
-`;
-
-const Logo = styled(NavLink)`
-  color: white;
-  text-decoration: none;
-  font-family: 'Journal';
-  font-size: 3em;
-  margin-right: auto;
-`;
+`
