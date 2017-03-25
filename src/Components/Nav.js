@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import colors from '../colors'
 import Home from './Home/Home'
 import About from './About'
+import ProjectList from './ProjectList/ProjectList'
 import Contact from './Contact'
 import avatar from '../assets/avatar.jpg'
 
@@ -27,6 +28,7 @@ class Nav extends Component {
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
+        <Route path="/projects" component={ProjectList} />
       </Wrapper>
 
     )
