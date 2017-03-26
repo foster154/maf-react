@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Project from './_ProjectListItem'
 import { data } from './_ProjectListData'
+import { Route } from 'react-router-dom'
+import ProjectTemplate from './Project'
 
 const renderProjects = () => {
   return data.map(project => {
@@ -22,6 +24,7 @@ const ProjectList = () => {
         { renderProjects() }
       </ListWrapper>
 
+      <Route path="/projects/:projectSlug}" component={ProjectTemplate} />
     </Wrapper>
   )
 }

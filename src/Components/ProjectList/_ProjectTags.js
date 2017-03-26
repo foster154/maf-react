@@ -16,44 +16,44 @@ import sassIcon from '../../assets/projects/badges/sass.png'
 import webpackIcon from '../../assets/projects/badges/webpack.png'
 import wordpressIcon from '../../assets/projects/badges/wordpress.png'
 
-const renderTags = (tags) => {
+const renderTags = ({tags, size}) => {
   return tags.map(tag => {
     switch (tag) {
       case 'bootstrap':
-        return <Tag key={`${tag}`} src={bootstrapIcon}></Tag>
+        return <Tag key={`${tag}`} style={{height: size || 36, width: size || 36}} src={bootstrapIcon}></Tag>
       case 'css':
-        return <Tag key={`${tag}`} src={cssIcon}></Tag>
+        return <Tag key={`${tag}`} style={{height: size || 36, width: size || 36}} src={cssIcon}></Tag>
       case 'gulp':
-        return <Tag key={`${tag}`} src={gulpIcon}></Tag>
+        return <Tag key={`${tag}`} style={{height: size || 36, width: size || 36}} src={gulpIcon}></Tag>
       case 'html':
-        return <Tag key={`${tag}`} src={htmlIcon}></Tag>
+        return <Tag key={`${tag}`} style={{height: size || 36, width: size || 36}} src={htmlIcon}></Tag>
       case 'jquery':
-        return <Tag key={`${tag}`} src={jqueryIcon}></Tag>
+        return <Tag key={`${tag}`} style={{height: size || 36, width: size || 36}} src={jqueryIcon}></Tag>
       case 'js':
-        return <Tag key={`${tag}`} src={jsIcon}></Tag>
+        return <Tag key={`${tag}`} style={{height: size || 36, width: size || 36}} src={jsIcon}></Tag>
       case 'mongo':
-        return <Tag key={`${tag}`} src={mongoIcon}></Tag>
+        return <Tag key={`${tag}`} style={{height: size || 36, width: size || 36}} src={mongoIcon}></Tag>
       case 'rails':
-        return <Tag key={`${tag}`} src={railsIcon}></Tag>
+        return <Tag key={`${tag}`} style={{height: size || 36, width: size || 36}} src={railsIcon}></Tag>
       case 'react':
-        return <Tag key={`${tag}`} src={reactIcon}></Tag>
+        return <Tag key={`${tag}`} style={{height: size || 36, width: size || 36}} src={reactIcon}></Tag>
       case 'redux':
-        return <Tag key={`${tag}`} src={reduxIcon}></Tag>
+        return <Tag key={`${tag}`} style={{height: size || 36, width: size || 36}} src={reduxIcon}></Tag>
       case 'sass':
-        return <Tag key={`${tag}`} src={sassIcon}></Tag>
+        return <Tag key={`${tag}`} style={{height: size || 36, width: size || 36}} src={sassIcon}></Tag>
       case 'webpack':
-        return <Tag key={`${tag}`} src={webpackIcon}></Tag>
+        return <Tag key={`${tag}`} style={{height: size || 36, width: size || 36}} src={webpackIcon}></Tag>
       case 'wordpress':
-        return <Tag key={`${tag}`} src={wordpressIcon}></Tag>
+        return <Tag key={`${tag}`} style={{height: size || 36, width: size || 36}} src={wordpressIcon}></Tag>
       default:
         return null
     }
   })
 }
 
-const ProjectTags = ({tags}) => (
+const ProjectTags = ({tags, size}) => (
   <Wrapper>
-    { renderTags(tags) }
+    { renderTags({tags, size}) }
   </Wrapper>
 )
 

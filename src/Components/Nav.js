@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import { Route, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../colors'
+import Contact from './Contact'
+import avatar from '../assets/avatar.jpg'
 import Home from './Home/Home'
 import About from './About'
 import ProjectList from './ProjectList/ProjectList'
-import Contact from './Contact'
-import avatar from '../assets/avatar.jpg'
+import ShowAndTour from './Projects/ShowAndTour'
 
 class Nav extends Component {
   render () {
@@ -28,7 +29,8 @@ class Nav extends Component {
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        <Route path="/projects" component={ProjectList} />
+        <Route exact path="/projects" component={ProjectList} />
+        <Route path='/projects/show-and-tour' component={ShowAndTour} />
       </Wrapper>
 
     )
