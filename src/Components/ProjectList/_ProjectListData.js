@@ -22,7 +22,7 @@ export const data = [
   },
   {
     name: 'Boise State Young Life',
-    slug: 'bsu-young-life',
+    slug: 'boise-state-young-life',
     cover: bsuYoungLifeCover,
     summary: 'A clean, friendly website built with WordPress for a local college ministry. Featuring an Instagram feed, embedded videos, and 100% mobile-friendly.',
     tags: [ 'wordpress', 'html', 'css' ]

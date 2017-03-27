@@ -3,7 +3,15 @@ import styled from 'styled-components'
 import Intro from './_IntroSection'
 import Content from './_Content'
 import ProjectLinks from './_ProjectLinks'
+import Screenshots from './_Screenshots'
 import coverImg from '../../assets/projects/covers/showtour.jpg'
+
+// Screenshots
+import ss01 from '../../assets/projects/ShowAndTour/st-01.jpg'
+import ss02 from '../../assets/projects/ShowAndTour/st-02.jpg'
+import ss03 from '../../assets/projects/ShowAndTour/st-03.jpg'
+import ss04 from '../../assets/projects/ShowAndTour/st-04.jpg'
+import ss05 from '../../assets/projects/ShowAndTour/st-05.jpg'
 
 const ShowAndTour = () => {
   return (
@@ -39,6 +47,31 @@ const ShowAndTour = () => {
         />
 
       </Content>
+
+      <Screenshots
+        data={[
+          {
+            image: ss01,
+            caption: 'The front introduction and sales page.'
+          },
+          {
+            image: ss02,
+            caption: 'A sample virtual tour page, showing a property\'s photos, description, map, and more.'
+          },
+          {
+            image: ss03,
+            caption: 'Another sample virtual tour page, displaying the property in another theme option.'
+          },
+          {
+            image: ss04,
+            caption: 'The dashboard, showing recently created tours.'
+          },
+          {
+            image: ss05,
+            caption: 'The tour edit page, where details and photos can be updated and managed.'
+          }
+        ]}
+      />
 
     </Wrapper>
   )
