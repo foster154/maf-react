@@ -19,10 +19,15 @@ export default About
 
 const Section = styled.section`
   padding: 30px;
+
+  @media (max-width: 500px) {
+    padding: 0;
+  }
 `
 
 const AboutImage = styled.img`
   display: block;
   width: 900px;
+  max-width: 100%;
   margin: 0 auto;
 `

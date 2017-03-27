@@ -19,11 +19,11 @@ class Nav extends Component {
     return (
       <Wrapper>
         <NavBar>
+          <Logo to='/'>
+            <Avatar src={avatar} />
+            Mark Adam Foster
+          </Logo>
           <Links>
-            <Logo to='/'>
-              <Avatar src={avatar} />
-              Mark Adam Foster
-            </Logo>
             <NavItem to='/' exact activeStyle={{color: colors.orange}}>Home</NavItem>
             <NavItem to='/about' activeStyle={{color: colors.orange}}>About</NavItem>
             <NavItem to='/projects' activeStyle={{color: colors.orange}}>Projects</NavItem>
@@ -57,13 +57,13 @@ const Wrapper = styled.div`
 const NavBar = styled.nav`
   background-color: ${colors.dkBlue};
   display: flex;
-`
+  justify-content: space-between;
+  padding: 10px 20px;
 
-const Avatar = styled.img`
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
-  margin-right: 10px;
+  @media (max-width: 910px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 
 const Logo = styled(NavLink)`
@@ -72,27 +72,56 @@ const Logo = styled(NavLink)`
   text-decoration: none;
   font-family: 'Journal';
   font-size: 3em;
-  margin-right: auto;
   align-items: center;
+  z-index: 100;
+
+  @media (max-width: 910px) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 1.8em;
+  }
 `;
 
+const Avatar = styled.img`
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
+`
+
 const Links = styled.ul`
+  padding: 0;
+  margin: 24px 0 0 0;
   display: flex;
   flex-direction: row;
   list-style: none;
   text-decoration: none;
-  width: 100%;
-  margin-right: 40px;
+  z-index: 100;
+
+  @media (max-width: 910px) {
+    margin-top: 10px;
+  }
 `
 
 const NavItem = styled(NavLink)`
   color: white;
   text-decoration: none;
-  margin: 24px 15px;
+  margin: 0 15px;
   font-size: 1.1em;
-  // font-weight: 300;
   &:hover {
     color: ${colors.orange};
     transition: color 0.3s;
+  }
+
+  @media (max-width: 910px) {
+    font-size: 1em;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 0.9em;
+    margin: 0 10px;
   }
 `

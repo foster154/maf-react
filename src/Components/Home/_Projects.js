@@ -20,10 +20,15 @@ export default Projects
 const Section = styled.section`
   padding: 30px;
   border-bottom: 1px solid #dedede;
+
+  @media (max-width: 500px) {
+    padding: 0;
+  }
 `
 
 const ProjectsImage = styled.img`
   display: block;
   width: 900px;
+  max-width: 100%;
   margin: 0 auto;
 `
