@@ -13,6 +13,7 @@ const colors = {
   green: '#1DABA5',
   offWhite: '#E9E0D5',
   orange: '#ED715C',
+  orangeHover: '#fd836e',
   dkGray: '#373a3c'
 }
 
