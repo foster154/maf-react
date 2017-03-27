@@ -8,7 +8,7 @@ const Projects = () => {
     <Section>
       <h2>Projects</h2>
       <ProjectsImage src={projectsImg} />
-      <RoundedLink to='/portfolio'>
+      <RoundedLink to='/projects'>
         See Projects & Details
       </RoundedLink>
     </Section>
