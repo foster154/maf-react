@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Project from './_ProjectListItem'
 import { data } from './_ProjectListData'
@@ -16,6 +17,8 @@ const renderProjects = () => {
 const ProjectList = () => {
   return (
     <Wrapper>
+      <Helmet title="Projects: Mark Adam Foster" />
+
       <h1>Projects</h1>
 
       <ListWrapper>
