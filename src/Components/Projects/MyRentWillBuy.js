@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Helmet from 'react-helmet'
 import Intro from './_IntroSection'
 import Content from './_Content'
 import ProjectLinks from './_ProjectLinks'
@@ -14,6 +15,8 @@ import ss03 from '../../assets/projects/RentBuy/mrwb-results.jpg'
 const MyRentWillBuy = () => {
   return (
     <Wrapper>
+
+      <Helmet title="Project: My Rent Will Buy" />
 
       <Intro
         title='My Rent Will Buy'

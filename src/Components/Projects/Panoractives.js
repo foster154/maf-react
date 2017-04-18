@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Intro from './_IntroSection'
 import Content from './_Content'
@@ -14,6 +15,8 @@ import ssTour from '../../assets/projects/Panoractives/pano-tour.jpg'
 const Panoractives = () => {
   return (
     <Wrapper>
+
+      <Helmet title="Project: Panoractives" />
 
       <Intro
         title='Panoractives'

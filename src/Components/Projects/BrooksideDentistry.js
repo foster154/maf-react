@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Intro from './_IntroSection'
 import Content from './_Content'
@@ -12,6 +13,8 @@ import ss01 from '../../assets/projects/Brookside/brookside-front.jpg'
 const BrooksideDentistry = () => {
   return (
     <Wrapper>
+
+      <Helmet title="Project: Brookside Dentistry" />
 
       <Intro
         title='Brookside Dentistry'
@@ -44,7 +47,7 @@ const BrooksideDentistry = () => {
         data={[
           {
             image: ss01,
-            caption: 'The home page.'
+            caption: 'The home page:'
           }
         ]}
       />

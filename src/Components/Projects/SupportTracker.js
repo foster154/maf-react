@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Intro from './_IntroSection'
 import Content from './_Content'
@@ -14,6 +15,8 @@ import ss04 from '../../assets/projects/SupportTracker/support_tracker_4.jpg'
 const SupportTracker = () => {
   return (
     <Wrapper>
+
+      <Helmet title="Project: Support Tracker" />
 
       <Intro
         title='Show and Tour'

@@ -1,8 +1,11 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 
 const Contact = () => (
   <Wrapper>
+
+    <Helmet title="Contact: Mark Adam Foster" />
 
     <h1>Contact</h1>
 

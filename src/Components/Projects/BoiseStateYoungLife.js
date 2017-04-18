@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Intro from './_IntroSection'
 import Content from './_Content'
@@ -12,6 +13,8 @@ import ss01 from '../../assets/projects/BSUYoungLife/bsu-younglife.jpg'
 const BoiseStateYoungLife = () => {
   return (
     <Wrapper>
+
+      <Helmet title="Project: Boise State Young Life" />
 
       <Intro
         title='Boise State Young Life'

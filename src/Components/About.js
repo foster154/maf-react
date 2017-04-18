@@ -1,9 +1,13 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import familyPic from '../assets/family-triangles.jpg'
 
 const About = () => (
   <PageWrapper>
+
+    <Helmet title="About: Mark Adam Foster" />
+
     <h1>About</h1>
 
     <FamilyPic src={familyPic} />
