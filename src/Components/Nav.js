@@ -6,6 +6,7 @@ import Contact from './Contact'
 import avatar from '../assets/avatar.jpg'
 import Home from './Home/Home'
 import About from './About'
+import Posts from './Posts'
 import ProjectList from './ProjectList/ProjectList'
 import ShowAndTour from './Projects/ShowAndTour'
 import Panoractives from './Projects/Panoractives'
@@ -13,8 +14,16 @@ import BoiseStateYoungLife from './Projects/BoiseStateYoungLife'
 import BrooksideDentistry from './Projects/BrooksideDentistry'
 import SupportTracker from './Projects/SupportTracker'
 import MyRentWillBuy from './Projects/MyRentWillBuy'
+import { postData } from './Posts/_PostData'
 
 class Nav extends Component {
+
+  renderPostRoutes () {
+    return postData.map(post => {
+      return <Route path={`/posts/${post.slug}`} component={post.content} key={post.slug} />
+    })
+  }
+
   render () {
     return (
       <Wrapper>
@@ -27,6 +36,7 @@ class Nav extends Component {
             <NavItem to='/' exact activeStyle={{color: colors.orange}}>Home</NavItem>
             <NavItem to='/about' activeStyle={{color: colors.orange}}>About</NavItem>
             <NavItem to='/projects' activeStyle={{color: colors.orange}}>Projects</NavItem>
+            <NavItem to='/posts' activeStyle={{color: colors.orange}}>Posts</NavItem>
             <NavItem to='/contact' activeStyle={{color: colors.orange}}>Contact</NavItem>
           </Links>
         </NavBar>
@@ -35,12 +45,15 @@ class Nav extends Component {
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route exact path="/projects" component={ProjectList} />
+        <Route exact path='/posts' component={Posts} />
         <Route path='/projects/show-and-tour' component={ShowAndTour} />
         <Route path='/projects/panoractives' component={Panoractives} />
         <Route path='/projects/boise-state-young-life' component={BoiseStateYoungLife} />
         <Route path='/projects/brookside-dentistry' component={BrooksideDentistry} />
         <Route path='/projects/support-tracker' component={SupportTracker} />
         <Route path='/projects/my-rent-will-buy' component={MyRentWillBuy} />
+
+        { this.renderPostRoutes() }
 
       </Wrapper>
 
@@ -68,7 +81,7 @@ const NavBar = styled.nav`
 
 const Logo = styled(NavLink)`
   display: flex;
-  color: white;
+  color: white !important;
   text-decoration: none;
   font-family: 'Journal';
   font-size: 3em;
