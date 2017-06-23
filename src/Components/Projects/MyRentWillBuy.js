@@ -22,7 +22,7 @@ const MyRentWillBuy = () => {
         title='My Rent Will Buy'
         summary='A Ruby on Rails web app for getting a mortgage qualification estimate. Backed with a PostgreSQL database and featuring automatic email notifications.'
         cover={coverImg}
-        tags={[ 'rails', 'sass', 'bootstrap', 'html', 'css' ]}
+        badges={[ 'rails', 'sass', 'bootstrap', 'html', 'css' ]}
       />
 
       <Content>

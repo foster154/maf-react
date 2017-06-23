@@ -16,4 +16,12 @@ const FooterDiv = styled.div`
   display: block;
   text-align: center;
   color: #bdbdbd;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 466) {
+    font-size: 14px;
+  }
 `

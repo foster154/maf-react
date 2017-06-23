@@ -3,7 +3,7 @@ import { Route, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import colors from '../colors'
 import Contact from './Contact'
-import avatar from '../assets/avatar.jpg'
+import SiteLogo from '../assets/site-logo.png'
 import Home from './Home/Home'
 import About from './About'
 import Posts from './Posts'
@@ -28,10 +28,9 @@ class Nav extends Component {
     return (
       <Wrapper>
         <NavBar>
-          <Logo to='/'>
-            <Avatar src={avatar} />
-            Mark Adam Foster
-          </Logo>
+          <LogoItem to='/'>
+            <Logo src={SiteLogo} />
+          </LogoItem>
           <Links>
             <NavItem to='/' exact activeStyle={{color: colors.orange}}>Home</NavItem>
             <NavItem to='/about' activeStyle={{color: colors.orange}}>About</NavItem>
@@ -79,7 +78,7 @@ const NavBar = styled.nav`
   }
 `
 
-const Logo = styled(NavLink)`
+const LogoItem = styled(NavLink)`
   display: flex;
   color: white !important;
   text-decoration: none;
@@ -98,10 +97,9 @@ const Logo = styled(NavLink)`
   }
 `;
 
-const Avatar = styled.img`
-  height: 80px;
-  width: 80px;
-  border-radius: 50%;
+const Logo = styled.img`
+  width: 412px;
+  max-width: 100%;
   margin-right: 10px;
 `
 
@@ -113,9 +111,15 @@ const Links = styled.ul`
   list-style: none;
   text-decoration: none;
   z-index: 100;
+  max-width: 100%;
 
   @media (max-width: 910px) {
     margin-top: 10px;
+  }
+
+  @media (max-width: 400px) {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 `
 
@@ -129,12 +133,12 @@ const NavItem = styled(NavLink)`
     transition: color 0.3s;
   }
 
-  @media (max-width: 910px) {
+  @media (max-width: 1000px) {
     font-size: 1em;
   }
 
   @media (max-width: 500px) {
     font-size: 0.9em;
-    margin: 0 10px;
+    margin: 10px;
   }
 `

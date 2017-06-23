@@ -24,7 +24,7 @@ const ShowAndTour = () => {
         title='Show and Tour'
         summary='A slideshow virtual tour creation web app for real estate agents & photographers to showcase properties.'
         cover={coverImg}
-        tags={[ 'rails', 'sass', 'bootstrap', 'html', 'css' ]}
+        badges={[ 'rails', 'sass', 'bootstrap', 'html', 'css' ]}
       />
 
       <Content>

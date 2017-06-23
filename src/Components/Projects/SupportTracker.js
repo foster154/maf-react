@@ -22,7 +22,7 @@ const SupportTracker = () => {
         title='Show and Tour'
         summary='A database-backed support ticket management web app. It features calendar and list views, a tagging system, metrics, and follow-up reminders.'
         cover={coverImg}
-        tags={[ 'rails', 'sass', 'bootstrap', 'html', 'css' ]}
+        badges={[ 'rails', 'sass', 'bootstrap', 'html', 'css' ]}
       />
 
       <Content>

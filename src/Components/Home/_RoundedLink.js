@@ -22,7 +22,7 @@ const StyledLink = styled(Link) `
   width: 250px;
   max-width: 96%;
   margin: 10px auto;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 22px;
   padding: 10px;
   text-decoration: none;

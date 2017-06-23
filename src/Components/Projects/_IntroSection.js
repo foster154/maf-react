@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import Tags from '../ProjectList/_ProjectTags'
+import Badges from '../ProjectList/_ProjectBadges'
 import colors from '../../colors'
 
-const IntroSection = ({ title, summary, tags, cover }) => (
+const IntroSection = ({ title, summary, badges, cover }) => (
   <Wrapper>
     <Title><TitleSmall>Project: </TitleSmall>{title}</Title>
     <Content>
       <ColumnLeft>
         <Summary>{summary}</Summary>
-        <Tags tags={tags} size={56} />
+        <Badges badges={badges} size={56} />
       </ColumnLeft>
       <ColumnRight>
         <Cover src={cover} />

@@ -22,7 +22,7 @@ const Panoractives = () => {
         title='Panoractives'
         summary='A mobile-friendly website with large imagery, photo galleries, and online scheduling integration.'
         cover={coverImg}
-        tags={[ 'wordpress', 'html', 'css' ]}
+        badges={[ 'wordpress', 'html', 'css' ]}
       />
 
       <Content>

@@ -20,7 +20,7 @@ const BoiseStateYoungLife = () => {
         title='Boise State Young Life'
         summary='A clean, friendly website built with WordPress for a local college ministry. Featuring an Instagram feed, embedded videos, and 100% mobile-friendly.'
         cover={coverImg}
-        tags={[ 'wordpress', 'html', 'css' ]}
+        badges={[ 'wordpress', 'html', 'css' ]}
       />
 
       <Content>

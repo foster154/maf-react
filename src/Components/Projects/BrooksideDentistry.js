@@ -20,7 +20,7 @@ const BrooksideDentistry = () => {
         title='Brookside Dentistry'
         summary='A professional WordPress-based website built for an award-winning dental office. This site includes embedded reviews and videos, as well as downloadable patient forms.'
         cover={coverImg}
-        tags={[ 'wordpress', 'html', 'css' ]}
+        badges={[ 'wordpress', 'html', 'css' ]}
       />
 
       <Content>
