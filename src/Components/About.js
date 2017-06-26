@@ -27,13 +27,25 @@ const About = () => (
 export default About
 
 const PageWrapper = styled.div`
-  max-width: 700px;
+  width: 700px;
+  max-width: 90%;
   margin: 0 auto;
   font-size: 22px;
   line-height: 32px;
+
+  @media(max-width: 767px) {
+    font-size: 20px;
+  }
+
+  @media(max-width: 590px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 `
 
 const FamilyPic = styled.img`
-  max-width: 96%;
+  display: block;
+  width: 450px;
+  max-width: 100%;
   margin: 0 auto;
 `

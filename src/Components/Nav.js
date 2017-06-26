@@ -98,7 +98,7 @@ const LogoItem = styled(NavLink)`
 `;
 
 const Logo = styled.img`
-  width: 412px;
+  width: 400px;
   max-width: 100%;
   margin-right: 10px;
 `
