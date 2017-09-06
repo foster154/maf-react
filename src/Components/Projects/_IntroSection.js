@@ -1,20 +1,25 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import { fadeIn, bounceIn } from 'react-animations'
 import Badges from '../ProjectList/_ProjectBadges'
 import colors from '../../colors'
 
 const IntroSection = ({ title, summary, badges, cover }) => (
   <Wrapper>
     <Title><TitleSmall>Project: </TitleSmall>{title}</Title>
-    <Content>
-      <ColumnLeft>
-        <Summary>{summary}</Summary>
-        <Badges badges={badges} size={56} />
-      </ColumnLeft>
-      <ColumnRight>
-        <Cover src={cover} />
-      </ColumnRight>
-    </Content>
+    <FadeIn>
+      <Content>
+        <ColumnLeft>
+          <Summary>{summary}</Summary>
+          <BounceIn>
+            <Badges badges={badges} size={56} />
+          </BounceIn>
+        </ColumnLeft>
+        <ColumnRight>
+          <Cover src={cover} />
+        </ColumnRight>
+      </Content>
+    </FadeIn>
   </Wrapper>
 )
 
@@ -38,6 +43,12 @@ const Title = styled.h1`
 
 const TitleSmall = styled.span`
   font-size: .5em;
+`
+
+const fadeInAnimation = keyframes`${fadeIn}`
+
+const FadeIn = styled.div`
+  animation: 500ms ${fadeInAnimation};
 `
 
 const Content = styled.div`
@@ -72,6 +83,12 @@ const ColumnRight = styled.div`
     width: 90%;
     margin: 10px auto 0;
   }
+`
+
+const bounceInAnimation = keyframes`${bounceIn}`
+
+const BounceIn = styled.div`
+  animation: 800ms ${bounceInAnimation};
 `
 
 const Summary = styled.div`

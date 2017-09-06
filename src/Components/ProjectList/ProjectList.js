@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import { fadeIn } from 'react-animations'
 import Project from './_ProjectListItem'
 import { data } from './_ProjectListData'
 
@@ -9,7 +10,7 @@ const renderProjects = () => {
     return <Project
       key={project.name}
       project={project}
-      link={`/projects/${project.slug}`}
+      link={`/portfolio/${project.slug}`}
       />
   })
 }
@@ -19,7 +20,7 @@ const ProjectList = () => {
     <Wrapper>
       <Helmet title="Projects: Mark Adam Foster" />
 
-      <h1>Projects</h1>
+      <h1>Portfolio</h1>
 
       <ListWrapper>
         { renderProjects() }
@@ -31,7 +32,10 @@ const ProjectList = () => {
 
 export default ProjectList
 
+const animation = keyframes`${fadeIn}`
+
 const Wrapper = styled.div`
+  animation: 500ms ${animation};
   width: 1000px;
   max-width: 96%;
   margin: 0 auto;

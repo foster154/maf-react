@@ -1,6 +1,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import { fadeIn } from 'react-animations'
+
 import familyPic from '../assets/family-triangles.jpg'
 
 const About = () => (
@@ -26,7 +28,10 @@ const About = () => (
 
 export default About
 
+const animation = keyframes`${fadeIn}`
+
 const PageWrapper = styled.div`
+  animation: 500ms ${animation};
   width: 700px;
   max-width: 90%;
   margin: 0 auto;

@@ -3,19 +3,19 @@ import styled from 'styled-components'
 import projectsImg from '../../assets/projects.jpg'
 import RoundedLink from './_RoundedLink'
 
-const Projects = () => {
+const Portfolio = () => {
   return (
     <Section>
-      <h2>Projects</h2>
+      <h2>Portfolio</h2>
       <ProjectsImage src={projectsImg} />
-      <RoundedLink to='/projects'>
-        See Projects & Details
+      <RoundedLink to='/portfolio'>
+        See Portfolio
       </RoundedLink>
     </Section>
   )
 }
 
-export default Projects
+export default Portfolio
 
 const Section = styled.section`
   padding: 30px;

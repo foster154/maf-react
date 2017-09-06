@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+import { fadeIn } from 'react-animations'
 
 const Contact = () => (
   <Wrapper>
@@ -22,7 +23,10 @@ const Contact = () => (
 
 export default Contact
 
+const animation = keyframes`${fadeIn}`
+
 const Wrapper = styled.div`
+  animation: 500ms ${animation};
   max-width: 800px;
   margin: 0 auto;
   text-align: center;

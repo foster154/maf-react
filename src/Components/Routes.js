@@ -26,14 +26,14 @@ const Routes = props => {
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
-      <Route exact path="/projects" component={ProjectList} />
+      <Route exact path="/portfolio" component={ProjectList} />
       <Route exact path='/posts' component={Posts} />
-      <Route path='/projects/show-and-tour' component={ShowAndTour} />
-      <Route path='/projects/panoractives' component={Panoractives} />
-      <Route path='/projects/boise-state-young-life' component={BoiseStateYoungLife} />
-      <Route path='/projects/brookside-dentistry' component={BrooksideDentistry} />
-      <Route path='/projects/support-tracker' component={SupportTracker} />
-      <Route path='/projects/my-rent-will-buy' component={MyRentWillBuy} />
+      <Route path='/portfolio/show-and-tour' component={ShowAndTour} />
+      <Route path='/portfolio/panoractives' component={Panoractives} />
+      <Route path='/portfolio/boise-state-young-life' component={BoiseStateYoungLife} />
+      <Route path='/portfolio/brookside-dentistry' component={BrooksideDentistry} />
+      <Route path='/portfolio/support-tracker' component={SupportTracker} />
+      <Route path='/portfolio/my-rent-will-buy' component={MyRentWillBuy} />
 
       { renderPostRoutes() }
     </div>

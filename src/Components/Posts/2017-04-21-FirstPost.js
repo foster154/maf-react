@@ -36,7 +36,7 @@ const FirstPost = () => (
 
     <p>Similarly, I want to teach what I’m learning as I go along. As <a href='http://nathanbarry.com/'>Nathan Barry</a> and <a href='http://seanwes.com/'>Seanwes</a> are fond of saying, “teach everything you know”. There is always someone who knows less than you, and perhaps you can help them.</p>
 
-    <p>Again, my natural inclination is to work privately with the idea that <em>someday</em> I will be an expert, and then I’ll begin to share my knowledge and help others through teaching. Instead, the truth is that people become experts <em>because</em> they teach.</p>
+    <p>Again, my natural inclination is to work privately until someday when I'm an expert I’ll begin to share my knowledge and help others through teaching. Instead, the truth is people become experts <em>because</em> they teach.</p>
 
     <p>My 3 immediate tasks:</p>
     <ul>

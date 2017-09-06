@@ -17,14 +17,14 @@ class Nav extends Component {
           <Links>
             <NavItem to='/' exact activeStyle={{color: colors.orange}}>Home</NavItem>
             <NavItem to='/about' activeStyle={{color: colors.orange}}>About</NavItem>
-            <NavItem to='/projects' activeStyle={{color: colors.orange}}>Projects</NavItem>
-            <NavItem to='/posts' activeStyle={{color: colors.orange}}>Posts</NavItem>
+            <NavItem to='/portfolio' activeStyle={{color: colors.orange}}>Portfolio</NavItem>
+            {/* <NavItem to='/posts' activeStyle={{color: colors.orange}}>Posts</NavItem> */}
             <NavItem to='/contact' activeStyle={{color: colors.orange}}>Contact</NavItem>
           </Links>
         </NavBar>
 
         <Routes />
-        
+
       </Wrapper>
     )
   }

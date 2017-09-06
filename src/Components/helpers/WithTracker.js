@@ -1,4 +1,5 @@
-// https://github.com/react-ga/react-ga/issues/122
+// An HOC that wraps the entire application to handle Google Analyics tracking.
+// Code pulled from: https://github.com/react-ga/react-ga/issues/122
 
 import React, { Component } from 'react';
 import GoogleAnalytics from 'react-ga';
