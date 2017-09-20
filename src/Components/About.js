@@ -35,8 +35,10 @@ const PageWrapper = styled.div`
   width: 700px;
   max-width: 90%;
   margin: 0 auto;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 32px;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 
   @media(max-width: 767px) {
     font-size: 20px;

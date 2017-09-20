@@ -1,17 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 import ScrollToTop from './Components/helpers/ScrollToTop'
-import Nav from './Components/Nav.js'
+import Nav from './Components/Nav/Nav.js'
 import Footer from './Components/Footer'
 
-const App = () => (
-  <ScrollToTop>
-    <Wrapper>
-      <Nav />
-      <Footer />
-    </Wrapper>
-  </ScrollToTop>
-)
+const App = props => {
+  const { pathname } = props.location
+  return (
+    <ScrollToTop>
+      <Wrapper>
+        <Nav pathname={pathname} />
+        {
+          pathname !== '/' &&
+          <Footer />
+        }
+      </Wrapper>
+    </ScrollToTop>
+  )
+}
 
 export default App
 

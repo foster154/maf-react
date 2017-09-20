@@ -4,4 +4,4 @@
 
 2. `cd build`
 
-3. `surge --domain www.markadamfoster.com`
+3. `surge --domain markadamfoster.com`
