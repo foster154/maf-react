@@ -10,19 +10,19 @@ const FrontPageNav = props => {
     <Wrapper>
       {
         navData.map(link => {
-          return <LinkWrapper key={link.path}>
-            <Link to={link.path}>
-              {link.label}
-            </Link>
-          </LinkWrapper>
+          if (link.path === '/') { return null }
+
+          return (
+            <LinkWrapper key={link.path}>
+              <Link to={link.path}>
+                {link.label}
+              </Link>
+            </LinkWrapper>
+          )
         })
       }
     </Wrapper>
   )
-}
-
-FrontPageNav.propTypes = {
-
 }
 
 export default FrontPageNav
@@ -44,6 +44,5 @@ const Link = styled(NavLink)`
 
   &:hover {
     color: ${colors.ltBlueHover};
-    // color: white;
   }
 `
