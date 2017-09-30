@@ -36,10 +36,10 @@ class Home extends Component {
               <Avatar src={avatarImg} />
               <TextContent>
                 <Name>Mark Adam Foster</Name>
-                <Title>Web & Mobile Developer, Designer, Tinkerer</Title>
+                <Title>Web, Mobile & UX Developer</Title>
 
                 <Intro>
-                  <p>Currently, I'm spending most of my time building websites, web apps and mobile apps with JavaScript (specifically React & React Native). I enjoy writing about those topics, as well productivity, marketing, and personal finance.</p>
+                  <p>I've been building digital products for a few years now... mostly ReactJS web apps, React Native mobile apps, and WordPress websites. Have a look around, and I'd love to hear from you!</p>
                 </Intro>
               </TextContent>
             </Left>
