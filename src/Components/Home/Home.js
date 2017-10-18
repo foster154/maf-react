@@ -9,28 +9,14 @@ import FrontPageNav from '../Nav/FrontPageNav'
 import colors from '../../colors'
 
 class Home extends Component {
-  constructor (props) {
-    super(props)
-    this.state = { photoStory: false }
-  }
-  render () {
+  render() {
     return (
       <Wrapper>
         <Helmet title="Mark Adam Foster" />
 
-        {
-          this.state.photoStory &&
-          <PhotoStory>
-            Lorem ipsum etcyarn
-          </PhotoStory>
-        }
-
         <HeroImage />
 
         <ContentBackground>
-          {/* <PhotoInfoButton onClick={() => this.setState({ photoStory: true })}>
-            [about this photo]
-          </PhotoInfoButton> */}
           <Content>
             <Left>
               <Avatar src={avatarImg} />
@@ -39,7 +25,12 @@ class Home extends Component {
                 <Title>Web, Mobile & UX Developer</Title>
 
                 <Intro>
-                  <p>I've been building digital products for a few years now... mostly ReactJS web apps, React Native mobile apps, and WordPress websites. Have a look around, and I'd love to hear from you!</p>
+                  <p>
+                    {`I've been building digital products for a few years now...
+                    these days mostly ReactJS web apps, React Native mobile
+                    apps, and WordPress websites. Have a look around, and I'd
+                    love to hear from you!`}
+                  </p>
                 </Intro>
               </TextContent>
             </Left>
@@ -65,14 +56,6 @@ const Wrapper = styled.div`
   position: relative;
 `
 
-const PhotoStory = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-`
-
 const HeroImage = styled.div`
   animation: 3s ${animation};
   height: 100vh;
@@ -83,7 +66,11 @@ const HeroImage = styled.div`
 
 const ContentBackground = styled.div`
   position: absolute;
-  background-image: linear-gradient(-180deg, rgba(73,73,73,0.00) 0%, #232323 19%);
+  background-image: linear-gradient(
+    -180deg,
+    rgba(73, 73, 73, 0) 0%,
+    #232323 19%
+  );
   width: 100%;
   color: white;
   text-align: center;
@@ -104,13 +91,11 @@ const Avatar = styled.img`
   border-radius: 50%;
   height: 100px;
   margin: 10px 26px;
-  background: #D0D0D0;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+  background: #d0d0d0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 `
 
-const TextContent = styled.div`
-
-`
+const TextContent = styled.div``
 
 const Left = styled.div`
   width: 75%;
@@ -118,9 +103,7 @@ const Left = styled.div`
   display: flex;
 `
 
-const Right = styled.div`
-
-`
+const Right = styled.div``
 
 const Name = styled.div`
   font-size: 48px;
